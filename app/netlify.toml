@@ -1,0 +1,22 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "20"
+  NPM_FLAGS = "--legacy-peer-deps"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# Environment variables required for deployment
+# You need to set these in Netlify dashboard:
+# NEXT_PUBLIC_SUPABASE_URL=your-supabase-url
+# NEXT_PUBLIC_SUPABASE_ANON_KEY=your-supabase-anon-key
+# SUPABASE_SERVICE_ROLE_KEY=your-supabase-service-role-key
+# NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=your-cloudinary-cloud-name
+# NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET=your-cloudinary-upload-preset
+# CLOUDINARY_API_KEY=your-cloudinary-api-key
+# CLOUDINARY_API_SECRET=your-cloudinary-api-secret
+# NEXT_PUBLIC_META_PIXEL_ID=your-meta-pixel-id
+# NEXT_PUBLIC_WHATSAPP_NUMBER=your-whatsapp-number
